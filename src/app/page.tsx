@@ -10,8 +10,8 @@ export default async function Page() {
   const client = createClient();
   const page = await client.getSingle("home_page").catch(() => notFound());
 
-  return <h3>It Worked!</h3>
-  // return <SliceZone slices={page.data.slices} components={components} />;
+  // return <h3>It Worked!</h3>
+  return <SliceZone slices={page.data.slices} components={components} />;
 }
 
 export async function generateMetadata(): Promise<Metadata> {
